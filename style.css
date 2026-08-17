@@ -1,4 +1,27 @@
+/* Resetting website so that it can be be applied to different websites */
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: jet;
+}
+
 #map {
     height: 500px;
     width: 500px;
+}
+
+/* Style for weaather card */
+.LocCard
+{
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    width:  250px;
+    height: 150px;
+    padding: 10px;
+    margin: 50px;
+
+
+    background-color: black;
+    color: white;
 }

@@ -65,18 +65,20 @@ async function weatherdata(lat,lon) {
 }
 
 async function ShowAllLocations(){
+    let AllLocation = document.getElementById("weatherInformation")
+    AllLocation.innerHTML = "";
     for (let locataion of saveLocation)
-    {
-        let data = await weatherdata(locataion.lt,locataion.ln)
-        let AllLocation = document.getElementById("weatherInformation")
-        console.log(data);
-         const div = document.createElement("div");
-    
+        {
+            let data = await weatherdata(locataion.lt,locataion.ln)
+            console.log(data);
+            const div = document.createElement("div");
+            div.setAttribute('class','LocCard')
+
             div.innerHTML = `
-                <h2>Weather Area</h2>
-                <p>Temperature: ${data.current.temperature_2m} °C</p>
-                <p>Humidity: ${data.current.relative_humidity_2m} %</p>
-                <p>Wind: ${data.current.wind_speed_10m} km/h</p>
+            <h2>Weather Area</h2>
+            <p>Temperature: ${data.current.temperature_2m} °C</p>
+            <p>Humidity: ${data.current.relative_humidity_2m} %</p>
+            <p>Wind: ${data.current.wind_speed_10m} km/h</p>
             `;
     
         AllLocation.appendChild(div)
