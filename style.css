@@ -2,26 +2,83 @@
 *{
     margin: 0; 
     padding: 0;
-    font-family: jet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header
+{
+    position: sticky;
+    top: 0;
+    background-color: #011C40;
+    color: #A7EBF2;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
 }
 
+footer
+{
+    background-color: #011C40;
+    color: #A7EBF2;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+#footerlinks
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+body
+{
+    background-color: #A7EBF2;
+    text-align: center;
+}
+
+h1
+{
+    color: #011C40;
+    text-align: left;
+}
+
+/* Style for the map container */
 #map {
-    height: 500px;
-    width: 500px;
+    margin: 20px; 
+    height: 350px;
+    width: auto; /*Automatically sets the width depending on the person screen which helps with mobile devices*/
+    border-radius: 20px;
 }
 
 /* Style for weaather card */
 .LocCard
 {
-    border: 1px solid black;
+    border: 1px solid #011C40;
     border-radius: 15px;
-    text-align: center;
     width:  250px;
     height: 150px;
     padding: 10px;
-    margin: 50px;
+    margin: 15px;
 
 
-    background-color: black;
-    color: white;
+    background-color: #26658C;
+    color: #A7EBF2;
+}
+/* Button style */
+#selectArea
+{
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid ;
+    border-radius: 10px;
+    background-color: #26658C;
+    color: #A7EBF2;
+}
+
+/* This is where the weather card information will be displayed. It also centers them */
+#weatherInformation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

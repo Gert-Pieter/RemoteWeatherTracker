@@ -20,12 +20,7 @@ map.on("click", function (e) {
         map.removeLayer(PreviewCircle)
     }
     // Create new circle
-    PreviewCircle = L.circle(
-        [lt, ln],
-        {
-            radius: 5000
-        }
-    ).addTo(map);  
+    PreviewCircle = L.marker([lt, ln]).addTo(map);  
 });
 
 function selectArea()
