@@ -38,10 +38,24 @@ body
 
 h1
 {
+    margin: 10px;
     color: #011C40;
     text-align: left;
 }
-
+#welcomeMessage
+{
+    margin: 10px;
+    padding: 20px;  
+    color: #A7EBF2;
+    text-align: center;
+    background-color: #011C40;
+    border-radius: 20px;
+}
+#welcomeMessage h1
+{
+    color: #A7EBF2;
+    text-align: center;
+}
 /* Style for the map container */
 #map {
     margin: 20px; 
@@ -53,7 +67,7 @@ h1
 /* Style for weaather card */
 .LocCard
 {
-    border: 1px solid #011C40;
+    border: 1px solid #26658C;
     border-radius: 15px;
     width:  250px;
     height: 150px;
@@ -70,15 +84,60 @@ h1
     margin: 20px;
     padding: 15px;
     border: 1px solid ;
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: #26658C;
     color: #A7EBF2;
 }
+#selectArea:hover
+{
+    transition: 0.5s;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #011C40;
+    background-color: #011C40;
+    color: #A7EBF2;
+}
 
+#deleteBtn
+{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #011C40;
+    border-radius: 50px;
+    background-color: #011C40;
+    color: #A7EBF2;
+}
+#deleteBtn:hover
+{
+    transition: 0.5s;
+    border: #A7EBF2 1px solid;
+    background-color: #A7EBF2;
+    color: #011C40;
+}
 /* This is where the weather card information will be displayed. It also centers them */
 #weatherInformation {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+#icon
+{
+    margin-top: 15px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #26658C;
+    color: #A7EBF2;
+    border-radius: 50%;
+}
+#icon:hover
+{
+    margin-top: 15px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    background-color: #A7EBF2;
+    border-radius: 50%;
 }
