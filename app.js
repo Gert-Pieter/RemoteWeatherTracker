@@ -29,6 +29,16 @@ map.on("click", function (e) {
     PreviewMarker = L.marker([lt, ln]).addTo(map);  
 });
 
+async function getLocation() {
+    let location = document.getElementById("cityInput").value;
+
+    
+            let city = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${location}&count=5&language=en&format=json`)
+            const data = await city.json();
+            console.log(data);            
+}
+
+
 function selectArea()
 {   
     firstTime = false;

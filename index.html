@@ -9,24 +9,37 @@
     
 </head>
 <body>
-    <header> Weahter Website</header>
+    <header>
+        <h1 id="logo">Weather Website</h1>
+
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Weather Information</a></li>
+                <li><a href="addlocation.html">Add Location</a></li>
+                <li><a href="contact.html">About</a></li>
+            </ul>
+        </div>
+    </header>
     <h1>Weather Details</h1>
-<div id="weatherInformation"></div>
-<h1>Weather Map</h1>
-<div id="map"></div>
+    <div id="weatherInformation"></div>
+    <h1>Weather Map</h1>
+    <div id="map"></div>
+    <h1>Search City</h1>
+    <input type="text" id="cityInput" placeholder="Enter city name"><button onclick="getLocation()">Search</button>
+    <div id="cityResults"></div>
 <br>
 <button id="selectArea" onclick="selectArea()">Select Location</button>
 <br>
 <div id="weatherInformation"></div>
-</body>
 <footer>
     <h3>Learn more!</h3>
-   <div id="footerLinks">
-    <a href="https://github.com/Gert-Pieter/WeatherWebsite" target="_blank"><img src="icons/1280px-Octicons-mark-github.svg" alt="github link" id="icon"></a>
-    <a href="https://leafletjs.com/index.html" target="_blank"><img src="icons/leaflet.dark.svg" alt="leaflet link" id="icon"></a>
-    <a href="https://open-meteo.com/" target="_blank"><img src="icons/Open_Meteo_logo.png" alt="github link" id="icon"></a>
-   </div>
+    <div id="footerLinks">
+        <a href="https://github.com/Gert-Pieter/WeatherWebsite" target="_blank"><img src="icons/1280px-Octicons-mark-github.svg" alt="github link" id="icon"></a>
+        <a href="https://leafletjs.com/index.html" target="_blank"><img src="icons/leaflet.dark.svg" alt="leaflet link" id="icon"></a>
+        <a href="https://open-meteo.com/" target="_blank"><img src="icons/Open_Meteo_logo.png" alt="github link" id="icon"></a>
+    </div>
 </footer>
+</body>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="app.js" defer></script>
 </html>

@@ -4,6 +4,16 @@
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* header code */
+
+#logo
+{
+    font-size: 30px;
+    text-align: left;
+    color: #A7EBF2;
+    justify-content: left;
+}
+
 header
 {
     position: sticky;
@@ -11,8 +21,37 @@ header
     background-color: #011C40;
     color: #A7EBF2;
     padding: 20px;
-    text-align: center;
     font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* navigation code */
+ul li
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul li a 
+{
+    justify-content: right;
+    text-decoration: none;
+    color: #A7EBF2;
+    font-size: 16px;
+    margin: 5px;
+    padding:10px;
+    border-radius: 10px ;
+}
+
+ul li a:hover
+{
+    background-color: #A7EBF2;
+    color: #011C40;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.5s;
 }
 
 footer
@@ -140,4 +179,20 @@ h1
     transition: 0.5s;
     background-color: #A7EBF2;
     border-radius: 50%;
+}
+
+/* addlocation page */
+
+#addLocationBox
+{
+    background-color: #011C40;
+    border-radius: 20px;
+    
+    padding: 40px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 50%;
+    width: 50%;
+
 }
