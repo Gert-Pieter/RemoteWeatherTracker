@@ -11,24 +11,20 @@
 <body>
     <header>
         <h1 id="logo">Weather Website</h1>
-
-        <div id="nav">
-            <ul>
-                <li><a href="index.html">Weather Information</a></li>
-                <li><a href="addlocation.html">Add Location</a></li>
-                <li><a href="contact.html">About</a></li>
-            </ul>
-        </div>
     </header>
+  <div id="locationInput">
+    <details>
+        <summary>Add Location</summary>
+        <!-- <input type="text" id="cityInput" placeholder="Enter city name"> -->
+        <!-- <button onclick="getLocation()">Search</button> -->
+        <button id="selectArea" onclick="selectArea()">Select Location</button>
+        <div id="map"></div>
+    </details>
+</div>
     <h1>Weather Details</h1>
     <div id="weatherInformation"></div>
-    <h1>Weather Map</h1>
-    <div id="map"></div>
-    <h1>Search City</h1>
-    <input type="text" id="cityInput" placeholder="Enter city name"><button onclick="getLocation()">Search</button>
     <div id="cityResults"></div>
 <br>
-<button id="selectArea" onclick="selectArea()">Select Location</button>
 <br>
 <div id="weatherInformation"></div>
 <footer>

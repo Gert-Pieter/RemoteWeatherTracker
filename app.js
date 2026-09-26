@@ -58,7 +58,7 @@ function selectArea()
 async function weatherdata(lat,lon) {
     try 
     {
-       const responses = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`)    
+       const responses = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=apparent_temperature,temperature_2m,relative_humidity_2m,wind_speed_10m&daily=precipitation_probability_max,temperature_2m_max,temperature_2m_min&forecast_days=7`)    
         
         if (!responses.ok) {
             throw new Error("not found");
@@ -83,18 +83,22 @@ async function ShowAllLocations(){
         }
         else{
 
+            // shows the actual weather information for all the saved locations
     weatherInfomartion.innerHTML = "";
     for (let locataion of saveLocation)
         {
             let data = await weatherdata(locataion.lt,locataion.ln)
             const div = document.createElement("div");
             div.setAttribute('class','LocCard')
-
+            console.log(data);
+            
             div.innerHTML = `
             <h2>Location ${saveLocation.indexOf(locataion) + 1}</h2>
-            <p>Temperature: ${data.current.temperature_2m} °C</p>
-            <p>Humidity: ${data.current.relative_humidity_2m} %</p>
-            <p>Wind: ${data.current.wind_speed_10m} km/h</p>
+            <p>🌡️: ${data.current.temperature_2m} °C</p>
+            <p>🌤️: ${data.current.apparent_temperature} °C</p>
+            <p>🌧️: ${data.daily.precipitation_probability_max[0]}%</p>
+            <p>💧: ${data.current.relative_humidity_2m} %</p>
+            <p>💨: ${data.current.wind_speed_10m} km/h</p>
 
             <button onclick="deleteLocation(${locataion.lt}, ${locataion.ln})" id="deleteBtn">Delete</button>
             `;

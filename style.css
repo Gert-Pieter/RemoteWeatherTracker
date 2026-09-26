@@ -22,37 +22,11 @@ header
     color: #A7EBF2;
     padding: 20px;
     font-size: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* navigation code */
-ul li
-{
-    display: inline-block;
-    margin-right: 20px;
-}
-
-ul li a 
-{
-    justify-content: right;
-    text-decoration: none;
-    color: #A7EBF2;
-    font-size: 16px;
-    margin: 5px;
-    padding:10px;
-    border-radius: 10px ;
-}
-
-ul li a:hover
-{
-    background-color: #A7EBF2;
-    color: #011C40;
-    padding: 10px;
-    border-radius: 15px;
-    transition: 0.5s;
-}
 
 footer
 {
@@ -97,26 +71,79 @@ h1
 }
 /* Style for the map container */
 #map {
-    margin: 20px; 
+    margin: auto; 
     height: 350px;
-    width: auto; /*Automatically sets the width depending on the person screen which helps with mobile devices*/
+    width: 350px; 
     border-radius: 20px;
 }
+#locationCard
+{
+    margin: auto;
+}
 
-/* Style for weaather card */
-.LocCard
+#areacard
 {
     border: 1px solid #26658C;
     border-radius: 15px;
-    width:  250px;
-    height: 150px;
-    padding: 10px;
-    margin: 15px;
-
+    padding: 5px;
+    margin: 10px;
 
     background-color: #26658C;
     color: #A7EBF2;
 }
+summary
+{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #26658C;
+    border-radius: 15px;
+    padding: 5px;
+    width: 150px;
+    font-size: 20px;
+    margin: auto;
+    background-color: #26658C;
+    color: #A7EBF2;
+}
+summary:hover {
+  background-color: #011C40;
+  color: #A7EBF2;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+details[open] {
+  padding: 10px;
+  margin: auto;
+
+  justify-content: center;
+  width: 350px;
+  background-color: #26658C;
+  border: 1px solid #26658C;
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+
+details[open] > summary {
+background-color: #011C40;
+  color: #A7EBF2;
+  border-radius: 15px;
+}
+
+details[open] > summary::marker {
+  content: "➖ ";
+  color: #ffffff;
+}
+
+
+summary::marker {
+  content: "➕ ";
+  color: #ffffff;
+}
+
+
+
+
 /* Button style */
 #selectArea
 {
@@ -181,18 +208,12 @@ h1
     border-radius: 50%;
 }
 
-/* addlocation page */
-
-#addLocationBox
+.LocCard
 {
     background-color: #011C40;
     border-radius: 20px;
-    
-    padding: 40px;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 50%;
-    width: 50%;
-
+    padding: 20px;
+    margin: 10px;
+    color: #A7EBF2;
 }
+
